@@ -74,12 +74,12 @@ export class HeroesComponent implements OnInit {
  
   constructor(private heroService: HeroService) { }
  
-  getHeroesSlowly(): void {
-    this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
+  getHeroes(): void {
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
  
   ngOnInit(): void {
-    this.getHeroesSlowly();
+    this.getHeroes();
   }
  
   onSelect(hero: Hero): void {
