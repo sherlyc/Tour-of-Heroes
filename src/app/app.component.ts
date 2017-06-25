@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Hero } from './hero';
 
 const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
@@ -63,7 +64,7 @@ const HEROES: Hero[] = [
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-`]
+`],
   template: 
   `<h1>{{title}}</h1>
    <h2>My Heroes</h2>
@@ -74,6 +75,8 @@ const HEROES: Hero[] = [
       {{hero.name}}
     </li>
   </ul>
+  <hero-detail [hero]="selectedHero"></hero-detail>
+
   `
 })
 export class AppComponent  { 
